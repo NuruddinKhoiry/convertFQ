@@ -27,3 +27,24 @@ Converting U (uracil) with T (thymine)
 ```bash
 $ convertFQ -i INPUT.fastq -c "rna2dna" -o OUTPUT
 ```
+
+##### Command options
+```bash
+$ convertFQ --help
+
+
+
+usage: convertFQ [-h] [-v] -i INPUT -c CONVERSION -o OUTPUT
+
+convertFQ: RNA -> DNA | DNA -> RNA
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         Print version and exit.
+  -i INPUT, --input INPUT
+                        Input FASTQ [Required]
+  -c CONVERSION, --conversion CONVERSION
+                        rna2dna | dna2rna [Required]
+  -o OUTPUT, --output OUTPUT
+                        output name [Required]
+```
