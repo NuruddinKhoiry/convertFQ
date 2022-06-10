@@ -1,7 +1,4 @@
 from setuptools import setup
-
-with open("README.md", "r") as readme_file:
-    readme = readme_file.read()
     
 requirements = ["biopython>=1.79", "argparse>=1.4.0"]
 
@@ -14,8 +11,10 @@ setup(
     author_email='nuruddinkhoiri34@gmail.com',
     license='unlicense',
     packages=['convertFQ'],
-    long_description=readme,
-    long_description_content_type="text/markdown",
     install_requires=requirements,
-    zip_safe=False
+    entry_points={
+        'console_scripts': [
+            'convertFQ = convertFQ.convertFQ:main'
+        ]
+    },
 )

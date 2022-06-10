@@ -1,20 +1,24 @@
 from Bio import SeqIO
 from Bio import Seq
-import argparse
+import convertFQ.utils as utils
+import sys
 
 
-parser = argparse.ArgumentParser(description='convertFQ: RNA -> DNA | DNA -> RNA')
-parser = argparse.ArgumentParser(prog='convertFQ')
-parser.add_argument("-v", '--version', action='version', version='%(prog)s v.1.0')
-parser.add_argument("-i", "--input", required=True, help="Input FASTQ [Required]")
-parser.add_argument("-c", "--conversion", required=True, type=str, help="rna2dna | dna2rna [Required]")
-parser.add_argument("-o", "--output", required=True, type=str, help="output name [Required]")
-args = vars(parser.parse_args())
+def main():
+    args = utils.get_args()
+    if str(args.conversion) == 'rna2dna':
+        rna2dna(args.input, args.output)
+        
+    elif str(args.input) == 'dna2rna':
+        dna2rna(args.input, args.output)
+        
+    else:
+        print('Sorry '+str(args.conversion)+' is wrong option\nPlease use eihter "rna2dna" or "dna2rna"')
 
-if args['conversion'] == 'rna2dna':
+def rna2dna(FASTQIN, FASTQOUT):
     print('Converting RNA to DNA ...\n')
     new_records = []
-    for record in SeqIO.parse(args['input'], "fastq"):
+    for record in SeqIO.parse(FASTQIN, "fastq"):
         sequence = str(record.seq)
         letter_annotations = record.letter_annotations
 
@@ -30,13 +34,13 @@ if args['conversion'] == 'rna2dna':
 
         new_records.append(record)
 
-    with open(str(args['output'])+'.fastq', 'w') as output_handle:
+    with open(str(FASTQOUT)+'.fastq', 'w') as output_handle:
         SeqIO.write(new_records, output_handle, "fastq")
-        
-elif args['conversion'] == 'dna2rna':
+
+def dna2rna(FASTQIN, FASTQOUT):
     print('Converting DNA to RNA ...\n')
     new_records = []
-    for record in SeqIO.parse(args['input'], "fastq"):
+    for record in SeqIO.parse(str(FASTQIN), "fastq"):
         sequence = str(record.seq)
         letter_annotations = record.letter_annotations
 
@@ -52,7 +56,8 @@ elif args['conversion'] == 'dna2rna':
 
         new_records.append(record)
 
-    with open(str(args['output'])+'.fastq', 'w') as output_handle:
+    with open(str(FASTQOUT)+'.fastq', 'w') as output_handle:
         SeqIO.write(new_records, output_handle, "fastq")
-else:
-    print('Sorry '+str(args['conversion'])+' is wrong option\nPlease use eihter "rna2dna" or "dna2rna"') 
+
+if __name__ == '__main__':
+    main()
