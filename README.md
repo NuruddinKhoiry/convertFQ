@@ -1,12 +1,11 @@
 # convertFQ: Converting DNA to RNA or RNA to DNA in a fastq file
 ============================================================
 
-This program is made to help you convert RNA to DNA or DNA to RNA in a fastq file.
+This program is made to help you converting RNA to DNA or DNA to RNA in a fastq file.
 
 ### Installation
 
-Download the lastest realese of convertFQ (convertFQ-1.0.tar.gz)
-Then install it using pip
+Download the lastest realese of convertFQ (convertFQ-1.0.tar.gz). Then install it using pip
 
 ```bash
 $ pip install convertFQ-1.0.tar.gz
