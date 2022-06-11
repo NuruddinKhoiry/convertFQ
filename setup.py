@@ -9,7 +9,7 @@ setup(
     url='https://github.com/NuruddinKhoiry/convertFQ.git',
     author='Ahmad Nuruddin Khoiri',
     author_email='nuruddinkhoiri34@gmail.com',
-    license='unlicense',
+    license='GNU GENERAL PUBLIC LICENSE V3',
     packages=['convertFQ'],
     install_requires=requirements,
     entry_points={
