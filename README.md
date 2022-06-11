@@ -11,7 +11,9 @@ $ pip install convertFQ
 ```
 
 ##### Option 2
-Download the latest realese of [convertFQ](https://github.com/NuruddinKhoiry/convertFQ/releases/download/v.0.1.0/convertFQ-0.1.0.tar.gz) in my Github repository. Then install it using pip
+Download the latest realese of [convertFQ](https://github.com/NuruddinKhoiry/convertFQ/releases/download/v.0.1.0/convertFQ-0.1.0.tar.gz) in my Github repository.
+
+Then install it using pip
 
 ```bash
 $ pip install convertFQ-1.0.tar.gz
