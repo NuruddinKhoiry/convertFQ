@@ -4,8 +4,14 @@
 This program is made to help you converting RNA to DNA | DNA to RNA in a fastq file.
 
 ### Installation
+##### Option
+You can easily install this package using [pip](https://pypi.org/project/convertFQ/)
+```bash
+$ pip install convertFQ
+```
 
-Download the latest realese of convertFQ (convertFQ-1.0.tar.gz). Then install it using pip
+##### Option 2
+Download the latest realese of convertFQ (convertFQ-1.0.tar.gz) in our Github repository. Then install it using pip
 
 ```bash
 $ pip install convertFQ-1.0.tar.gz
