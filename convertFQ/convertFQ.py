@@ -9,7 +9,7 @@ def main():
     if str(args.conversion) == 'rna2dna':
         rna2dna(args.input, args.output)
         
-    elif str(args.input) == 'dna2rna':
+    elif str(args.conversion) == 'dna2rna':
         dna2rna(args.input, args.output)
         
     else:
