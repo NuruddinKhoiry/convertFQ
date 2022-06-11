@@ -16,7 +16,7 @@ Download the latest realese of [convertFQ](https://github.com/NuruddinKhoiry/con
 Then install it using pip
 
 ```bash
-$ pip install convertFQ-1.0.tar.gz
+$ pip install convertFQ-0.1.0.tar.gz
 ```
 
 ### Example usage
