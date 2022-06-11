@@ -5,7 +5,7 @@ This program is made to help you converting RNA to DNA | DNA to RNA in a fastq f
 
 ### Installation
 ##### Option 1
-You can easily install this package using [pip](https://pypi.org/project/convertFQ/)
+You can easily install this package using [PyPI](https://pypi.org/project/convertFQ/)
 ```bash
 $ pip install convertFQ
 ```
