@@ -4,7 +4,7 @@ requirements = ["biopython>=1.79", "argparse>=1.4.0"]
 
 setup(
     name='convertFQ',
-    version='1.0',
+    version='0.1.0',
     description='convertFQ is used to convert either DNA2RNA or RNA2DNA in a fastq file',
     url='https://github.com/NuruddinKhoiry/convertFQ.git',
     author='Ahmad Nuruddin Khoiri',
