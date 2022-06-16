@@ -55,3 +55,6 @@ optional arguments:
   -o OUTPUT, --output OUTPUT
                         output name [Required]
 ```
+
+# Citation
+If you find this package useful, please cite (https://github.com/NuruddinKhoiry/convertFQ)
